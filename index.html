@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CRUD</title>
+    <link rel="stylesheet" href="./crud.css">
+</head>
+
+<body>
+    <!-- main crud holder -->
+    <div class="crud">
+        <!-- describing project -->
+        <div class="headings__desc">
+            <h2>Crud</h2>
+            <p>Products management system</p>
+        </div>
+        <!-- inserting products data  -->
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title" />
+            <div class="price">
+                <input type="number" id="price" oninput="getFinalPrice()" placeholder="price" />
+                <input type="number" id="taxes" oninput="getFinalPrice()" placeholder="taxes" />
+                <input type="number" id="ads" oninput="getFinalPrice()" placeholder="ads" />
+                <input type="number" id="discount" oninput="getFinalPrice()" placeholder="discount" />
+                <small id="total"></small>
+            </div>
+            <input type="number" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <button id="submit">create</button>
+        </div>
+        <!-- viewing products data  -->
+        <div class="outputs">
+            <div class="search_block">
+                <input type="text" id="search" onkeyup="search(this.value)" placeholder="search">
+                <div class="search_btns">
+                    <button onclick="detectMode(this.id)"  id="searchByTitle">Search By title</button>
+                    <button onclick="detectMode(this.id)"  id="searchByPrice">Search By price</button>
+                    <button onclick="detectMode(this.id)" id="searchByCategory">Search By Category</button>
+                </div>
+            </div>
+            <div id="delAllHolder"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>ads</th>
+                    <th>taxes</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="products"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="./crud.js"></script>
+</body>
+
+</html>
