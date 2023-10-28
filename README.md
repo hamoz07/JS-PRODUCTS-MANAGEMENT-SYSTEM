@@ -3,4 +3,4 @@ PRODUCTS MANAGEMENT SYSTEM using native js created successfully to practice high
 
 this advanced crud is created to simulate real world products management system in stores
 
-you can check it out from here: https://github.com/JS-PRODUCTS-MANAGEMENT-SYSTEM/
+you can check it out from here: https://hamoz07.github.io/JS-PRODUCTS-MANAGEMENT-SYSTEM/
